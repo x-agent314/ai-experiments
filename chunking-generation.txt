@@ -1,0 +1,279 @@
+
+░██████╗░██████╗░████████╗  ░█████╗░██╗░░██╗██╗░░░██╗███╗░░██╗██╗░░██╗██╗███╗░░██╗░██████╗░
+██╔════╝░██╔══██╗╚══██╔══╝  ██╔══██╗██║░░██║██║░░░██║████╗░██║██║░██╔╝██║████╗░██║██╔════╝░
+██║░░██╗░██████╔╝░░░██║░░░  ██║░░╚═╝███████║██║░░░██║██╔██╗██║█████═╝░██║██╔██╗██║██║░░██╗░
+██║░░╚██╗██╔═══╝░░░░██║░░░  ██║░░██╗██╔══██║██║░░░██║██║╚████║██╔═██╗░██║██║╚████║██║░░╚██╗
+╚██████╔╝██║░░░░░░░░██║░░░  ╚█████╔╝██║░░██║╚██████╔╝██║░╚███║██║░╚██╗██║██║░╚███║╚██████╔╝
+░╚═════╝░╚═╝░░░░░░░░╚═╝░░░  ░╚════╝░╚═╝░░╚═╝░╚═════╝░╚═╝░░╚══╝╚═╝░░╚═╝╚═╝╚═╝░░╚══╝░╚═════╝░
+
+CHANGES FROM PROMPTS: I had to break lines a bit in messages from GPT it waas just a horrible mess
+without line breaks.
+
+I was inspired first by a recent paper [1] about scaling transformers beyond their regular limits.
+More experimentation will bea attempted.
+
+[1]Bulatov, A., Kuratov, Y., and Burtsev, M. S., “Scaling Transformer to 1M tokens and beyond with RMT”, 
+<i>arXiv e-prints</i>, 2023. doi:10.48550/arXiv.2304.11062.
+
+
+┌───────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│                                                                                                       │
+│                                                                                                       └
+
+                                                
+                                                ,,,
+
+                                                ,,,
+                                                
+                                                A314 31
+                                                GPT4 386
+                                                A314 73
+                                                GPT4 603
+                                                A314 38
+                                                GPT4 825
+                                                A314 118
+                                                GPT4 835
+                                                A314 243
+                                                GPT4 2457
+
+                                                
+                                    This is condensed context. 
+                                    Byte count is recorded.
+                                     
+                                                 ...
+
+│                                                ...                                                    │
+│                                                                                                       │
+│                                                                                                       │
+│                                                                                                       │
+└───────────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+┌──────────────────────────────────────────────────────────────────────────────────┬─────────────────────┐
+│                                                                                  │                     │
+│                 A314                                                             │                   1 │
+└──────────────────────────────────────────────────────────────────────────────────┴─────────────────────┘
+Can you try this. So break nginx into like a dozen aspects. But don't just write about them. 
+For each aspect of functionality, make a prompt that I  would have to send back to you and 
+then you would go full blast with a good descripton with code samples etc. Try it.
+
+┌──────────────────────────────────────────────────────────────────────────────────┬─────────────────┬───┐
+│                                                                                  │june 13 2023     │   │
+│             GPT4 PLUS                                                            │                 │ 1 │
+└──────────────────────────────────────────────────────────────────────────────────┴─────────────────┴───┘
+ 
+Sure, I can create prompts for different aspects of Nginx. Here are some aspects of Nginx you might want to ask about:
+
+    Nginx Architecture
+        "Can you explain the master-worker architecture of Nginx and how it helps in handling multiple connections?"
+
+    Nginx Configuration
+        "How do I configure Nginx for serving static files?"
+
+    Nginx Reverse Proxy
+        "What is a reverse proxy and how is it configured in Nginx?"
+
+    Nginx Load Balancing
+        "How does Nginx handle load balancing? Could you provide a configuration example?"
+
+    Nginx as an HTTP Server
+        "Can you explain how Nginx serves HTTP requests and the role of ngx_http_core_module in it?"
+
+    Nginx SSL/TLS Configuration
+        "How do I configure SSL/TLS in Nginx for secure connections?"
+
+    Nginx URL Rewriting and Redirects
+        "Can you provide an example of URL rewriting and redirection in Nginx?"
+
+    Nginx Logging
+        "How does logging work in Nginx? Can you provide an example of configuring custom logs?"
+
+    Nginx Caching
+        "How is caching configured and used in Nginx?"
+
+    Nginx Rate Limiting
+        "Can you explain how to implement rate limiting in Nginx?"
+
+    Nginx HTTP/2 Support
+        "How does Nginx handle HTTP/2 requests? Can you show me how to enable it?"
+
+    Nginx Modules
+        "Can you explain the role of modules in Nginx and give an example of a popular one, such as ngx_http_gzip_module?"
+
+You can choose the prompts that interest you and send them back one by one,
+ and I'll provide detailed responses including code samples where relevant. 
+Please note that I may not be able to provide actual source code from Nginx 
+due to its license (BSD-like), but I will do my best to illustrate the concepts
+with pseudo-code or configuration examples.
+
+
+┌──────────────────────────────────────────────────────────────────────────────────┬─────────────────────┐
+│                                                                                  │                     │
+│                 A314                                                             │                   2 │
+└──────────────────────────────────────────────────────────────────────────────────┴─────────────────────┘
+Very good, i have a suggestion. Can we modify each question in some way where  there is some kinda metadata between them that allows you to see theyre linked together. Example;
+
+Nginx Reverse Proxy
+
+    "[nginx 1.25 survey. multichunk_analysis. chunk 3/12. main topic: nginx survey through eyes of a C hacker. this chunk:  What is a reverse proxy and how is it configured in Nginx?"
+
+┌──────────────────────────────────────────────────────────────────────────────────┬─────────────────┬───┐
+│                                                                                  │june 13 2023     │   │
+│             GPT4 PLUS                                                            │                 │ 2 │
+└──────────────────────────────────────────────────────────────────────────────────┴─────────────────┴───┘
+
+Absolutely, that's a great idea! It's beneficial for both of us to keep track of the context and progress. Here are the modified prompts:
+
+    Nginx Architecture
+        "[Nginx 1.25 survey. Multichunk_analysis. Chunk 1/12. Main topic: Nginx survey through the eyes of a C hacker. 
+	This chunk: Can you explain the master-worker architecture of Nginx and how it helps in handling multiple connections?]"
+
+    Nginx Configuration
+        "[Nginx 1.25 survey. Multichunk_analysis. Chunk 2/12. Main topic: Nginx survey through the eyes of a C hacker. 
+	This chunk: How do I configure Nginx for serving static files?]"
+
+    Nginx Reverse Proxy
+        "[Nginx 1.25 survey. Multichunk_analysis. Chunk 3/12. Main topic: Nginx survey through the eyes of a C hacker. 
+	This chunk: What is a reverse proxy and how is it configured in Nginx?]"
+
+    Nginx Load Balancing
+        "[Nginx 1.25 survey. Multichunk_analysis. Chunk 4/12. Main topic: Nginx survey through the eyes of a C hacker. 
+    This chunk: How does Nginx handle load balancing? Could you provide a configuration example?]"
+
+    Nginx as an HTTP Server
+        "[Nginx 1.25 survey. Multichunk_analysis. Chunk 5/12. Main topic: Nginx survey through the eyes of a C hacker. 
+    This chunk: Can you explain how Nginx serves HTTP requests and the role of ngx_http_core_module in it?]"
+
+    Nginx SSL/TLS Configuration
+        "[Nginx 1.25 survey. Multichunk_analysis. Chunk 6/12. Main topic: Nginx survey through the eyes of a C hacker. 
+	This chunk: How do I configure SSL/TLS in Nginx for secure connections?]"
+
+    Nginx URL Rewriting and Redirects
+        "[Nginx 1.25 survey. Multichunk_analysis. Chunk 7/12. Main topic: Nginx survey through the eyes of a C hacker. 
+	This chunk: Can you provide an example of URL rewriting and redirection in Nginx?]"
+
+    Nginx Logging
+        "[Nginx 1.25 survey. Multichunk_analysis. Chunk 8/12. Main topic: Nginx survey through the eyes of a C hacker. 
+	This chunk: How does logging work in Nginx? Can you provide an example of configuring custom logs?]"
+
+    Nginx Caching
+        "[Nginx 1.25 survey. Multichunk_analysis. Chunk 9/12. Main topic: Nginx survey through the eyes of a C hacker. 
+	This chunk: How is caching configured and used in Nginx?]"
+
+    Nginx Rate Limiting
+        "[Nginx 1.25 survey. Multichunk_analysis. Chunk 10/12. Main topic: Nginx survey through the eyes of a C hacker. 
+	This chunk: Can you explain how to implement rate limiting in Nginx?]"
+
+    Nginx HTTP/2 Support
+        "[Nginx 1.25 survey. Multichunk_analysis. Chunk 11/12. Main topic: Nginx survey through the eyes of a C hacker. 
+	This chunk: How does Nginx handle HTTP/2 requests?
+
+┌──────────────────────────────────────────────────────────────────────────────────┬─────────────────────┐
+│                                                                                  │                     │
+│                 A314                                                             │                   3 │
+└──────────────────────────────────────────────────────────────────────────────────┴─────────────────────┘
+Ok I want to make another  suggestion. How about I can either copypaste prompt you provided or I can do the same thing by
+ referring to the chunk #. I also want to add a size parameter there as well. And how technical to make the thing, 0 for 
+ like no code samples, very much for somebody who knos nothing about computers and 5 is like a guy that is reading nginx 
+ source code for fun and games. So example:
+
+chunk: #3  800 words technical 5
+
+would mean asking about reverse proxy to generate about 800 words and have it be on the highes ttechnical level (5/5)
+
+do you feel like you understand everything?
+
+┌──────────────────────────────────────────────────────────────────────────────────┬─────────────────┬───┐
+│                                                                                  │june 13 2023     │   │
+│             GPT4 PLUS                                                            │                 │ 3 │
+└──────────────────────────────────────────────────────────────────────────────────┴─────────────────┴───┘
+
+Absolutely, I understand your request. It's a great way to customize the responses to fit your needs. Here's how you could format it:
+
+    Chunk: #3
+    Word Count: 800
+    Technical Level: 5
+
+By specifying the chunk number, you can refer to the topics I previously outlined (with #3 corresponding to "Nginx Reverse Proxy",
+ for example). The word count provides a guideline for how in-depth the response should be, and the technical level can range from 
+ 0 (non-technical, layman's terms) to 5 (highly technical, for someone who's familiar with the Nginx source code and comfortable 
+ with C programming and network concepts).
+
+So if you're ready, feel free to start with the first chunk or any other chunk that you're interested in.
+
+-a314
+
+Chunk: 10
+Word Count: 800
+Technical Level: 5 
+
+┌──────────────────────────────────────────────────────────────────────────────────┬─────────────────┬───┐
+│                                                                                  │june 13 2023     │   │
+│             GPT4 PLUS                                                            │                 │ 4 │
+└──────────────────────────────────────────────────────────────────────────────────┴─────────────────┴───┘
+
+You're asking for a detailed, technical explanation of how rate limiting works in Nginx, specifically under the 
+ngx_http_limit_req_module and ngx_http_limit_conn_module.
+
+Rate limiting is an important function that helps in maintaining the integrity and stability of a server. 
+t controls the processing of requests that arrive too frequently and establishes limits on connections to guard 
+against abusive behaviors.
+
+The ngx_http_limit_req_module controls the frequency of requests processed by the server. It uses the "leaky bucket"
+method to manage request rate limiting. This means that it allows the server to handle incoming requests up to a limit, 
+beyond which it starts dropping the requests until there's enough space in the "bucket."
+
+
+You're asking for a detailed, technical explanation of how rate limiting works in Nginx, specificall
+y under the ngx_http_limit_req_module and ngx_http_limit_conn_module. 
+
+Rate limiting is an important function that helps in maintaining the integrity and stability of a se
+rver. It controls the processing of requests that arrive too frequently and establishes limits on co
+nnections to guard against abusive behaviors. 
+
+The ngx_http_limit_req_module controls the frequency of requests processed by the server. It uses th
+e "leaky bucket" method to manage request rate limiting. This means that it allows the server to han
+dle incoming requests up to a limit, beyond which it starts dropping the requests until there's enou
+gh space in the "bucket." 
+
+A simple rate limiting configuration using ngx_http_limit_req_module might look like this: 
+
+nginx 
+
+http {    limit_req_zone $binary_remote_addr zone=mylimit:10m rate=10r/s; 
+
+server {        location /login/ {            limit_req zone=mylimit burst=20;        }    }} 
+
+In this example, the limit_req_zone directive establishes a shared memory zone called "mylimit" to s
+tore the state of requests coming from each IP address. The rate is set to 10 requests per second. T
+he limit_req directive is then used to apply this limit to requests coming to the /login/ location, 
+with a burst limit of 20 requests. 
+
+On the other hand, the ngx_http_limit_conn_module limits the number of simultaneous connections for 
+the assigned session or key, in this case, the $binary_remote_addr which is the client's IP address.
+ 
+
+A simple configuration for connection limiting may look like this: 
+
+nginx 
+
+http {    limit_conn_zone $binary_remote_addr zone=connlimit:10m; 
+
+server {        location /download/ {            limit_conn connlimit 3;        }    }} 
+
+Here, the limit_conn_zone directive is setting up a shared memory zone "connlimit", which will track
+ the number of connections per IP address. The limit_conn directive applies this limit to requests f
+or the /download/ location, allowing a maximum of 3 simultaneous connections per IP address. 
+
+Keep in mind, these are simple configurations for illustrative purposes. In real-world applications,
+ the configurations would probably be more complex, and you'd likely want to customize the keys used
+ in your limit_req_zone and limit_conn_zone directives. For example, you might use a combination of 
+the client's IP address and other request properties as the key to achieve more granular control ove
+r rate and connection limiting. 
+
+Finally, it's worth noting that rate limiting can lead to dropping legitimate requests if the limits
+ are set too low. It's important to configure it carefully and monitor its effects to strike the rig
+ht balance between protecting your server and providing good service to your users. 
+
+For an in-depth understanding, I recommend going through the actual C code for these modules in the 
+Nginx source code.
